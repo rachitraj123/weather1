@@ -4,7 +4,11 @@
 }
 
 body{
-    background-color: #f2f2f2;;
+    background-color: #e3d3d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
@@ -16,7 +20,7 @@ body{
 }
 .weatherbody{
     border-radius: 20px;
-    background-color: rgb(159, 164, 168);
+    background-color: transparent;
     box-shadow: 4px 6px 5px rgb(91, 89, 89);
     padding: 10px;
     padding-top: 0;
@@ -26,6 +30,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding-bottom: 0;
+    position: relative;
 }
 header{
     background-color: rgb(116, 116, 189);
@@ -43,11 +48,13 @@ header{
     justify-content: center;
     width: 80%;
     height: 50px;
+    padding: 0;
+    margin-bottom: 1rem;
 }
 .label1{
     border-radius: 20px;
     font-size: 25px;
-    color: #c2cfd7;
+    color: #013d46;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -56,21 +63,28 @@ header{
 }
 
 
-.search-icon{
-    width: 100%;
+/* .search-icon{
+    width:100%;
+    min-width: 37px;
 
-}
+} */
 
 
 .submit{
     border: none;
-    width: 20%;
+    width:40%;
     min-width: 20px;
     margin-left:0.3px ;
     border-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background-color: rgb(78, 204, 204);
+    background-color: rgb(19, 88, 88);
+}
+.submit b{
+    color: #dde3e6;
+}
+.submit:hover{
+    background-color: #013d46;
 }
 .search{
     border: 2px solid lightgray;
@@ -80,20 +94,29 @@ header{
     border-bottom-right-radius: 0;
     padding: 20px;
     font-size: 20px;
+    font-weight: bold;
 }
-.search:hover,.search:active{
-    border: none;
-}
+
 .cloud-img{
-    width: 70%;
+    width: 100%;
+    border-radius: 20px;
 }
 .cloud-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
+    border-radius: 20px;
+    z-index: -1;
+    height: 100%;
 }
 .detailstart{
     width: 100%;
     display: block;
     padding-bottom: 1rem;
+    margin-top: 1rem;
 }
 .details{
     margin: auto auto;
@@ -130,5 +153,34 @@ header{
     padding: 20px;
     width: 100%;
     margin-bottom: 0;
+}
 
+.temperature {
+    color: #ff5733; 
+}
+
+.humidity {
+    color: #0099cc; 
+}
+
+.pressure {
+    color: #00cc66;
+}
+
+.wind-speed {
+    color: #ff9900; 
+}
+
+.visibility {
+    color: #9900cc; 
+}
+
+.clouds {
+    color: #cc0000;
+}
+.more{
+    background-color: #013d46;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 20px;
 }

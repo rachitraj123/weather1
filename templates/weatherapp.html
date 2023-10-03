@@ -12,27 +12,31 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col col-sm-12 col-md-4 offset-md-4 weatherbody">
-                <header><h1><b>Weather App </b></h1></header>
+            <div class="col col-sm-12 col-lg-4 offset-lg-4 weatherbody">
+                <header><h1><b>Weather App</b></h1></header>
                 <label for="search" class="label1"><b>Enter City</b></label>
                 <form class="form" method='post'>
                     {% csrf_token %}
                     <input type="text" class="search" name="city"  id="search" required>
-                    <button type="submit" class="submit btn btn-info" id="submit"><img src="{% static 'media/search-icon.png' %}" alt="" class="search-icon"></button>
+                    <button type="submit" class="submit btn btn-info" id="submit"><b>Get weather</b></button>
                 </form>
                 <div class="cloud-img" id="cloud">
-                    <img src="{% static 'media/weather-cloud-icon.png' %}" alt="">
+                    <img src="{% static 'media/srG.gif' %}" alt="">
                 </div>
                 {% if data %}
                 <div class="detailstart" id="startdetails">
                     <div class="details" id="details">
                         <h3>Weather in {{ data.name }}, {{ data.sys.country }}</h3>
-                        <p>Temperature: <span>{{ data.main.temp }}</span> &#x212A;</p>
-                        <p>Humidity level: <span>{{ data.main.humidity }}</span></p>
-                        <p>Pressure: <span>{{ data.main.pressure }}</span></p>
-                        <p>Wind speed: <span>{{ data.wind.speed }}</span> m/s</p>
-                        <p>Visibility: <span>{{data.visibility}}</span></p>
-                        <p>Clouds: <span>{{data.clouds.all}}</span></p>
+                        <div class="more">
+                            <p>Temperature: <span class="temperature">{{ data.main.temp }} &#x212A;</span></p>
+                            <p>Humidity level: <span class="{% if data.main.humidity > 85 %}text-warning{% endif %} humidity">
+                            {{ data.main.humidity }}%
+                            </span></p>
+                            <p>Pressure: <span class="pressure">{{ data.main.pressure }} hPa</span></p>
+                            <p>Wind speed: <span class="wind-speed">{{ data.wind.speed }} m/s</span></p>
+                            <p>Visibility: <span class="visibility">{{ data.visibility }} meters</span></p>
+                            <p>Clouds: <span class="clouds">{{ data.clouds.all }}%</span></p>
+                        </div>
                     </div>
                 </div>
                 {% elif error_message %}
