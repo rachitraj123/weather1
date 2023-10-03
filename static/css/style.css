@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f2f2f2;;
+}
+
+.container{
+    display: flex;
+    margin-top: 20px;
+}
+.row{
+    width:100%;
+}
+.weatherbody{
+    border-radius: 20px;
+    background-color: rgb(159, 164, 168);
+    box-shadow: 4px 6px 5px rgb(91, 89, 89);
+    padding: 10px;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+}
+header{
+    background-color: rgb(116, 116, 189);
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 2px 0px ;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 50px;
+}
+.label1{
+    border-radius: 20px;
+    font-size: 25px;
+    color: #c2cfd7;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+
+.search-icon{
+    width: 100%;
+
+}
+
+
+.submit{
+    border: none;
+    width: 20%;
+    min-width: 20px;
+    margin-left:0.3px ;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgb(78, 204, 204);
+}
+.search{
+    border: 2px solid lightgray;
+    width: 60%;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 20px;
+    font-size: 20px;
+}
+.search:hover,.search:active{
+    border: none;
+}
+.cloud-img{
+    width: 70%;
+}
+.cloud-img img{
+    width: 100%;
+}
+.detailstart{
+    width: 100%;
+    display: block;
+    padding-bottom: 1rem;
+}
+.details{
+    margin: auto auto;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: gray;
+    border-radius: 20px;
+    width: 80%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    padding: 20px;
+
+}
+.details h3{
+    align-self: center;
+}
+.details p{
+    margin-bottom: 0;
+}
+
+.error_message{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error_message h6{
+    color: #dde3e6;
+    background-color: rgb(213, 99, 38);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 0;
+
+}
